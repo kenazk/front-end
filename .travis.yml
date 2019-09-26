@@ -1,12 +1,13 @@
-language: node_js
+# language: node_js
 
 sudo: required
+if: branch = master
 
-node_js:
-  - "4.8.1"
+# node_js:
+#   - "4.8.1"
 
-services:
-  - docker
+# services:
+#   - docker
 
 # before_install:
 #   - sudo apt-get install -y make
@@ -16,7 +17,8 @@ services:
 #   - npm install
 
 env:
-  - GROUP=kenazk COMMIT="${TRAVIS_COMMIT}" TAG=latest REPO=front-end NEBULA_WORKFLOW=puppetize-demo-app-1
+  # - GROUP=kenazk COMMIT="${TRAVIS_COMMIT}" TAG=latest REPO=front-end NEBULA_WORKFLOW=puppetize-demo-app-1
+  - NEBULA_WORKFLOW=puppetize-demo-app-1
 
 script:
   # - set -e
